@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero-grid">
+  <article class="hero-card">
+    <div class="hero-meta">
+      <span class="chip" id="security-chip">Système serein</span>
+      <span class="muted" id="hero-updated">Capteurs en direct</span>
+    </div>
+    <p class="display" id="hero-temp">21,4°</p>
+    <p class="hero-sub">Température moyenne de la maison</p>
+    <div class="hero-stats">
+      <div><span id="kpi-rooms">3/6</span><small>Lumières</small></div>
+      <div><span id="kpi-power">1,42 kW</span><small>Puissance</small></div>
+      <div><span id="kpi-hum">46 %</span><small>Humidité</small></div>
+      <div><span id="kpi-aqi">92</span><small>Air</small></div>
+    </div>
+  </article>
+
+  <article class="plan-card">
+    <header class="card-head">
+      <h2>Plan live</h2>
+      <span class="muted">Occupation & lumières</span>
+    </header>
+    <div class="floorplan" id="floorplan" aria-label="Plan de la maison"></div>
+  </article>
+</section>
+
+<section class="section">
+  <header class="section-head">
+    <h2>Capteurs</h2>
+    <p>Température, RFID, mouvement humain et fumée — rafraîchis en continu.</p>
+  </header>
+  <div class="sensor-grid" id="sensor-grid"></div>
+</section>
+
+<section class="split">
+  <article class="panel">
+    <header class="card-head">
+      <h2>Commandes rapides</h2>
+    </header>
+    <div class="quick-grid">
+      <button class="quick" data-scene="home">
+        <strong>Je rentre</strong>
+        <span>Accueil lumineux</span>
+      </button>
+      <button class="quick" data-scene="away">
+        <strong>Je sors</strong>
+        <span>Maison sécurisée</span>
+      </button>
+      <button class="quick" data-scene="night">
+        <strong>Bonne nuit</strong>
+        <span>Chemin & 19 °C</span>
+      </button>
+      <button class="quick" data-scene="movie">
+        <strong>Cinéma</strong>
+        <span>Salon tamisé</span>
+      </button>
+    </div>
+  </article>
+  <article class="panel">
+    <header class="card-head">
+      <h2>Derniers événements</h2>
+      <a class="text-link" href="{{ url_for('activity') }}">Voir tout</a>
+    </header>
+    <ul class="timeline" id="timeline"></ul>
+  </article>
+</section>
+{% endblock %}

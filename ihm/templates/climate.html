@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="climate-layout">
+  <article class="thermostat-card">
+    <p class="eyebrow">Consigne</p>
+    <div class="thermo-ring" id="thermo-ring">
+      <button class="icon-btn" data-climate-delta="-0.5" aria-label="Baisser">−</button>
+      <div>
+        <strong id="target-temp">21,5°</strong>
+        <span>cible</span>
+      </div>
+      <button class="icon-btn" data-climate-delta="0.5" aria-label="Monter">+</button>
+    </div>
+    <p class="muted">Moyenne actuelle <b id="current-temp">21,4 °C</b></p>
+    <div class="mode-row" id="mode-row">
+      <button data-mode="off">Arrêt</button>
+      <button data-mode="auto" class="on">Auto</button>
+      <button data-mode="heat">Chauffage</button>
+      <button data-mode="cool">Clim</button>
+    </div>
+    <label class="fan-label">Ventilation
+      <input type="range" min="0" max="3" value="2" id="fan-range" />
+    </label>
+  </article>
+
+  <div class="climate-side">
+    <article class="panel">
+      <header class="card-head"><h2>Par pièce</h2></header>
+      <div id="room-temps" class="room-temps"></div>
+    </article>
+    <article class="panel">
+      <header class="card-head"><h2>Courbe 12 dernières mesures</h2></header>
+      <div class="spark" id="temp-spark"></div>
+      <p class="muted">Le capteur de température pilote la régulation automatique.</p>
+    </article>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="charts">
+  <article class="panel">
+    <header class="card-head"><h2>Température</h2></header>
+    <div class="spark tall" id="hist-temp"></div>
+  </article>
+  <article class="panel">
+    <header class="card-head"><h2>Fumée</h2></header>
+    <div class="spark tall" id="hist-smoke"></div>
+  </article>
+  <article class="panel">
+    <header class="card-head"><h2>Mouvement</h2></header>
+    <div class="spark tall" id="hist-motion"></div>
+  </article>
+  <article class="panel">
+    <header class="card-head"><h2>Puissance</h2></header>
+    <div class="spark tall" id="hist-power"></div>
+  </article>
+</section>
+<article class="panel">
+  <header class="card-head">
+    <h2>Flux d’activité</h2>
+  </header>
+  <ul class="timeline dense" id="full-timeline"></ul>
+</article>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="security-hero">
+  <article class="panel accent">
+    <p class="eyebrow">État du périmètre</p>
+    <h2 id="sec-level">Serein</h2>
+    <p class="muted" id="sec-copy">Alarme, badges RFID, détection de présence et fumée.</p>
+    <div class="btn-row">
+      <button class="btn" data-action="arm-toggle" id="sec-arm">Armer l’alarme</button>
+      <button class="btn ghost" data-action="ack">Réarmer les capteurs</button>
+    </div>
+  </article>
+  <div class="stat-tiles" id="sec-tiles"></div>
+</section>
+
+<section class="split">
+  <article class="panel">
+    <header class="card-head">
+      <h2>Lecteur RFID</h2>
+      <span class="muted" id="rfid-status">En attente</span>
+    </header>
+    <div class="rfid-card" id="rfid-card"></div>
+    <div class="btn-row wrap" id="rfid-actions"></div>
+  </article>
+  <article class="panel">
+    <header class="card-head">
+      <h2>Badges autorisés</h2>
+    </header>
+    <ul class="badge-list" id="badge-list"></ul>
+  </article>
+</section>
+
+<section class="panel">
+  <header class="card-head">
+    <h2>Journal de sécurité</h2>
+  </header>
+  <ul class="timeline dense" id="sec-timeline"></ul>
+</section>
+{% endblock %}

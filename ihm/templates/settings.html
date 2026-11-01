@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="settings-grid">
+  <article class="panel">
+    <header class="card-head"><h2>Maison</h2></header>
+    <label class="field">Nom de la résidence
+      <input type="text" id="house-input" maxlength="48" />
+    </label>
+    <button class="btn" id="save-house">Enregistrer</button>
+  </article>
+  <article class="panel">
+    <header class="card-head"><h2>Capteurs branchés</h2></header>
+    <ul class="spec-list">
+      <li><strong>Température</strong><span>Sonde intérieure multi-pièces</span></li>
+      <li><strong>RFID</strong><span>Lecteur d’entrée · badges famille / invités</span></li>
+      <li><strong>Mouvement</strong><span>Détection de présence humaine PIR</span></li>
+      <li><strong>Fumée</strong><span>Seuil d’alerte incendie</span></li>
+    </ul>
+  </article>
+  <article class="panel">
+    <header class="card-head"><h2>Simulation démo</h2></header>
+    <p class="muted">Pour présenter le projet sans le matériel branché, les capteurs évoluent en temps réel. Un badge RFID peut être simulé depuis la page Sécurité.</p>
+    <p class="muted">Les commandes (lumières, volets, alarme, scénarios) passent par l’API Flask <code>/api/*</code> — prêtes à relier à un Raspberry Pi / ESP32.</p>
+  </article>
+</section>
+{% endblock %}
