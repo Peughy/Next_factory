@@ -1,0 +1,17 @@
+Composant,Reference / Valeur,Quantite,Role,Alimentation
+Carte maitre,Raspberry Pi 4 Model B,1,Supervision centrale et capteurs numeriques,5V USB-C
+Carte esclave,Arduino Uno,1,Acquisition analogique LDR et alarme 5V,5V via USB
+Batterie puissance,Batterie 12V DC,1,Source puissance autonome pour actionneurs,12V
+Regulateur de tension,Module BEC / Buck 12V vers 5V,1,Alimentation isolee 5V (servo + LCD + fumee),12V -> 5V
+Lecteur RFID,Module RC522 (SPI),1,Controle d'acces par badge,3.3V (RPi)
+Afficheur LCD,LCD 16x2 avec adaptateur I2C PCF8574,1,Affichage etat usine et alertes,5V (BEC)
+Capteur temperature/humidite,DHT11,1,Mesure ambiante toutes les 3 s,3.3V (RPi)
+Capteur de fumee,Module K869051 (sortie DO),1,Detection incendie prioritaire,5V (BEC)
+Servomoteur,Micro servo SG90,1,Ouverture/fermeture de la porte,5V (BEC)
+Capteur luminosite,Module LDR (sortie analogique AO),1,Detection obscurite (seuil > 600),5V (Arduino)
+Buzzer,Buzzer 5V,1,Signal sonore alarme incendie (1500 Hz),5V (Arduino)
+LED alerte,LED rouge 5mm,1,Temoin lumineux alarme et eclairage nuit,5V (Arduino)
+Resistance pont diviseur (R1),1 kOhm (1/4W),1,Abaissement signal DO fumee 5V -> 3.33V,Passif
+Resistance pont diviseur (R2),2 kOhm (1/4W),1,Abaissement signal DO fumee vers GND,Passif
+Resistance limitation LED,220 Ohm (1/4W),1,Protection LED sur broche D10 Arduino,Passif
+Connectique,Fils Dupont M-M / M-F + cable USB A-B,1 lot,Liaison cartes capteurs et masse commune,-
